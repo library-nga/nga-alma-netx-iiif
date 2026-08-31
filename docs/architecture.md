@@ -38,7 +38,6 @@ The NGA Library digital-resource architecture separates **library resource manag
 Alma is the Library's resource-management system and manages:
 
 - Bibliographic records.
-- Collection relationships.
 - Digital representations.
 - Remote Digital Repository configuration.
 - Discovery relationships exposed to Primo.

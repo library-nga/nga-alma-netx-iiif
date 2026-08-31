@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="720" viewBox="0 0 520 720">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker><style>.b{fill:#fff;stroke:#236ac5;stroke-width:2;rx:10}.t{font:600 17px Arial,sans-serif}.s{font:14px Arial,sans-serif}.l{stroke:#333;stroke-width:2.5;marker-end:url(#a)}</style></defs><rect width="520" height="720" fill="white"/>
+<text x="260" y="35" text-anchor="middle" font-family="Arial" font-size="25" font-weight="bold">Digital Publishing Workflow</text>
+<rect class="b" x="95" y="60" width="330" height="58"/><text class="t" x="260" y="87" text-anchor="middle">Digitization / Acquisition</text><text class="s" x="260" y="107" text-anchor="middle">digital images and source materials</text>
+<line class="l" x1="260" y1="118" x2="260" y2="145"/>
+<rect class="b" x="95" y="146" width="330" height="66"/><text class="t" x="260" y="174" text-anchor="middle">Load to NetX/eDAM</text><text class="s" x="260" y="196" text-anchor="middle">images + metadata</text>
+<line class="l" x1="260" y1="212" x2="260" y2="239"/>
+<rect class="b" x="95" y="240" width="330" height="58"/><text class="t" x="260" y="275" text-anchor="middle">Web Publish</text>
+<line class="l" x1="260" y1="298" x2="260" y2="325"/>
+<rect class="b" x="95" y="326" width="330" height="66"/><text class="t" x="260" y="354" text-anchor="middle">IIIF Image API</text><text class="s" x="260" y="376" text-anchor="middle">UUID-based image service available</text>
+<line class="l" x1="260" y1="392" x2="260" y2="419"/>
+<rect class="b" x="95" y="420" width="330" height="66"/><text class="t" x="260" y="448" text-anchor="middle">Generate / Regenerate Manifest</text><text class="s" x="260" y="470" text-anchor="middle">stable MMS-based manifest URL</text>
+<line class="l" x1="260" y1="486" x2="260" y2="513"/>
+<rect class="b" x="95" y="514" width="330" height="66"/><text class="t" x="260" y="542" text-anchor="middle">Alma Remote Digital Representation</text><text class="s" x="260" y="564" text-anchor="middle">bibliographic + digital inventory relationship</text>
+<line class="l" x1="260" y1="580" x2="260" y2="607"/>
+<rect class="b" x="95" y="608" width="330" height="72"/><text class="t" x="260" y="637" text-anchor="middle">Primo View Online</text><text class="s" x="260" y="660" text-anchor="middle">embedded custom IIIF viewer</text>
+</svg>

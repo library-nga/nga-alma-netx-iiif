@@ -44,32 +44,19 @@ The Library had already distributed IIIF manifest URLs to external partners and 
 
 The significant change happened **inside the manifest**:
 
-### Earlier image-service pattern
+### Earlier IIIF image API service pattern
 
 ```text
 libraryimage.nga.gov/.../ptif/...
 ```
 
-### New eDAM-based pattern
+### New eDAM-based pattern for IIIF Image API service
 
 ```text
 api.nga.gov/{UUID}/...
 ```
 
 The public manifest URL could therefore remain stable while its canvases and image services were updated to use eDAM-backed UUID resources.
-
-## Canvas Identifier Migration
-
-The eDAM migration also introduced UUID-based canvas identifiers.
-
-Earlier canvases could contain path-derived identifiers tied to the old PTIF storage structure. The new manifests use stable UUID-style canvas IDs while preserving useful labels such as:
-
-```text
-leaf 1 recto
-leaf 1 verso
-```
-
-This affected external projects that had stored canvas IDs, even though the manifest URL itself remained stable.
 
 ## Manifest Naming
 
@@ -80,9 +67,6 @@ Example:
 ```text
 https://libraryimage.nga.gov/manifest/mms/99682013504896.json
 ```
-
-Temporary migration-era manifests used an `-edam.json` suffix. That suffix was removed as the new workflow became the production workflow.
-
 For multi-volume titles, individual manifests may be generated:
 
 ```text
@@ -113,7 +97,7 @@ Because NetX was not one of the predefined DAM types used by the Library, the re
 
 Primo's presentation layer was customized to embed an IIIF viewer using the IIIF manifest associated with the resource.
 
-The legacy implementation used the Primo customization package with:
+The current implementation used the Primo customization package with:
 
 - AngularJS.
 - JavaScript.
@@ -125,24 +109,12 @@ The legacy implementation used the Primo customization package with:
 
 The Library shared this approach with other research libraries investigating external IIIF manifests and Alma/Primo integration.
 
-The key message was that **Alma Digital was not required to store the original files**. The Library could maintain its digital assets externally while Alma represented the digital inventory and Primo provided discovery and presentation.
+The key message was that **We use remote digital repository (e.g. NetX) to store the original files**. The Library could maintain its digital assets externally while Alma represented the digital inventory and Primo provided discovery and presentation.
 
 ## 2026: Primo NDE Transition
 
 The move to Primo NDE changes the front-end customization framework.
 
-The IIIF viewer customization must therefore be rewritten for the NDE environment. However, the fundamental integration remains:
-
-```text
-Alma
-  ↓
-Remote Digital Repository
-  ↓
-NetX/eDAM
-  ↓
-IIIF
-  ↓
-Primo
-```
+The IIIF viewer customization must therefore be rewritten for the NDE environment. However, the fundamental integration remains unchanged.
 
 This demonstrates one of the original architecture's strengths: the discovery interface can evolve without requiring the digital asset repository or IIIF delivery model to be redesigned.

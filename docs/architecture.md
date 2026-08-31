@@ -65,9 +65,6 @@ Conceptually:
 Alma bibliographic record
         |
         v
-Alma collection
-        |
-        v
 Digital representation
         |
         v
@@ -77,7 +74,7 @@ Remote Digital Repository
 NetX/eDAM + IIIF services
 ```
 
-NetX was not used as a predefined Ex Libris repository type. The repository type was configured as **Other**, with custom integration logic calling the NetX API.
+NetX is not listed as a predefined Ex Libris repository type. The repository type was configured as **Other**, with custom integration logic calling the NetX API.
 
 ## Identifier Strategy
 
@@ -90,7 +87,6 @@ Key identifiers include:
 | Alma | MMS ID for the bibliographic resource |
 | NetX/eDAM | Asset identifier / UUID |
 | IIIF Manifest | Stable public manifest URL |
-| IIIF Canvas | UUID-based canvas identifier |
 | IIIF Image API | UUID-based image service |
 
 A major 2021 design decision was to preserve the **existing manifest URL** while changing the image and service identifiers contained within the manifest. This minimized downstream disruption for external consumers that had already stored NGA manifest URLs.

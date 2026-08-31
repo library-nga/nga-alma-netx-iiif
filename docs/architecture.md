@@ -5,7 +5,7 @@
 The NGA Library digital-resource architecture separates **library resource management**, **digital asset management**, **standards-based image delivery**, and **public discovery** across specialized systems.
 
 <p align="center">
-  <img src="../diagrams/architecture-overview.svg" alt="NGA Library Alma NetX IIIF system architecture" width="900">
+  <img src="../diagrams/system-architecture.svg" alt="NGA Library Alma NetX IIIF system architecture" width="900">
 </p>
 
 The diagram shows the relationship among Primo VE, the custom IIIF viewer, IIIF manifests, Alma Remote Digital Repository, NetX/eDAM, and NGA IIIF Image API services.

@@ -47,7 +47,7 @@ See [System Architecture](docs/architecture.md) for details.
 ## Core Workflow
 
 ```text
-Digitization
+Digitization/Acquisition
     ↓
 Image + metadata loaded to NetX/eDAM
     ↓
@@ -76,21 +76,14 @@ See [Digital Publishing Workflow](docs/digital-publishing-workflow.md).
 - [Troubleshooting and Operations](docs/troubleshooting.md)
 - [Identifier and Manifest Patterns](examples/identifier-patterns.md)
 
-## Key Design Decisions
-
-1. **Do not duplicate master images in Alma.** NetX/eDAM remains the authoritative digital asset repository.
-2. **Use Alma Remote Digital Repository.** Alma manages the digital representation and discovery relationship while content remains remote.
-3. **Use IIIF as the interoperability layer.** Primo and other applications consume manifests and image services rather than proprietary image delivery interfaces.
-4. **Preserve public manifest URLs.** During the 2021 migration to eDAM, existing manifest URLs were retained while the image identifiers and IIIF services inside the manifests moved to UUID-based delivery.
-5. **Keep presentation independent from storage.** Primo customization can change, including migration to Primo NDE, without fundamentally changing the Alma–NetX–IIIF architecture.
 
 ## Historical Context
 
 The Library originally used a local image server that handled digital asset storage, IIIF APIs/services, viewer delivery, and manifest generation. In 2021 the Library began moving digital assets into the Gallery's NetX/eDAM environment.
 
-The target date for the new eDAM workflow was **June 1, 2021**. The workflow moved newly digitized images and metadata into eDAM, web-published them, and delivered them through UUID-based IIIF services. Existing digital titles were migrated in batches.
+The new workflow starting June 1, 2021 includes uploading newly digitized images and metadata into eDAM, web-publish them, and deliver them through UUID-based IIIF services. Existing digital titles were migrated in batches.
 
-By 2023, the integration was documented as having two principal implementation areas:
+The integration includes two principal implementation areas:
 
 1. Alma configuration using a Remote Digital Repository and digital representations so Primo could expose **View Online**.
 2. Primo customization using HTML/JavaScript/CSS and AngularJS to embed an IIIF viewer and manifest in the full record display.

@@ -13,58 +13,22 @@ The implementation was designed around a clear separation of responsibilities:
 - **IIIF** — image delivery, manifests, canvases, and interoperable presentation services.
 - **Primo VE** — public discovery and embedded IIIF viewing experience.
 
-## High-Level Architecture
+## Overview
 
-```text
-                         Primo VE
-                    Discovery / Viewer
-                           |
-                  Custom IIIF Viewer
-                           |
-                           v
-                    IIIF Manifest
-             libraryimage.nga.gov/manifest
-                           |
-             +-------------+-------------+
-             |                           |
-             v                           v
-           Alma                       NetX/eDAM
- Remote Digital Repository         Asset repository
- Digital Representation            Metadata + images
- Collection hierarchy              Web publishing
-             |                           |
-             |                     custom NetX API
-             |                           |
-             |                           v
-             |                     IIIF Image API
-             |                     api.nga.gov/UUID
-             |                           |
-             +---------------------------+
-```
+<table>
+<tr>
+<td width="58%" valign="top">
+<strong>System Architecture</strong><br><br>
+<img src="diagrams/system-architecture.svg" alt="NGA Library Alma NetX IIIF system architecture" width="100%">
+</td>
+<td width="42%" valign="top">
+<strong>Digital Publishing Workflow</strong><br><br>
+<img src="diagrams/digital-publishing-workflow.svg" alt="NGA Library digital publishing workflow" width="100%">
+</td>
+</tr>
+</table>
 
-See [System Architecture](docs/architecture.md) for details.
-
-## Core Workflow
-
-```text
-Digitization/Acquisition
-    ↓
-Image + metadata loaded to NetX/eDAM
-    ↓
-Web Publish
-    ↓
-IIIF Image API available
-    ↓
-Manifest generated / regenerated
-    ↓
-Alma Remote Digital Representation
-    ↓
-Primo "View Online"
-    ↓
-Embedded IIIF viewer
-```
-
-See [Digital Publishing Workflow](docs/digital-publishing-workflow.md).
+See [System Architecture](docs/architecture.md) and [Digital Publishing Workflow](docs/digital-publishing-workflow.md) for details.
 
 ## Repository Documentation
 
@@ -75,7 +39,6 @@ See [Digital Publishing Workflow](docs/digital-publishing-workflow.md).
 - [Primo IIIF Viewer](docs/primo-iiif-viewer.md)
 - [Troubleshooting and Operations](docs/troubleshooting.md)
 - [Identifier and Manifest Patterns](examples/identifier-patterns.md)
-
 
 ## Historical Context
 

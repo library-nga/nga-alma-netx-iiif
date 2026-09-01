@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Alma provides the library-management and digital-inventory layer for the integration. The original images remain in NetX/eDAM.
+Alma provides the library-management, digital title, and digital-inventory layer for the integration. The original images remain in NetX/eDAM.
 
 ## Requirement for Primo View Online
 
-For Primo to expose **View Online**, the Alma bibliographic resource needs appropriate electronic or digital inventory. For Alma NetX integration, this is accomplished through a **digital representation** of bib title associated with an Alma Collection and a Remote Digital Repository.
+For Primo to expose **View Online**, Alma bibliographic title needs appropriate electronic or digital inventory. For Alma NetX integration, this is accomplished through a **digital representation** of bib title associated with an Alma Collection and a Remote Digital Repository.
 
 ## Remote Digital Repository
 
@@ -14,19 +14,9 @@ The Library configured Alma with a Remote Digital Repository for NetX (external 
 
 NetX is configured using repository type **Other**, with custom integration logic/scripts communicating with the NetX API and IIIF Image API.
 
-Conceptually:
+<img width="1086" height="533" alt="image" src="https://github.com/user-attachments/assets/d5f052fb-2bfa-44d2-a0b1-c324f6c1a8ef" />
+<img width="1092" height="442" alt="image" src="https://github.com/user-attachments/assets/8cc17edb-7fd7-411e-bd9a-7cdbe1cb4532" />
 
-```text
-Bibliographic record
-      ↓
-Alma Collection
-      ↓
-Digital representation
-      ↓
-Remote Digital Repository
-      ↓
-NetX/eDAM / IIIF resource
-```
 
 ## Collection Requirement
 

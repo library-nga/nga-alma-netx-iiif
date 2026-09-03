@@ -2,7 +2,6 @@
     "use strict";
 
     var app = angular.module('viewCustom', ['angularLoad', 'googleAnalytics']);
-    // var app = angular.module('viewCustom', ['angularLoad','nga-footer','nga-header']);
 
     // Beginning of viewer
     app.controller('imageViewerAfterController', [

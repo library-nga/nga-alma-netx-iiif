@@ -67,18 +67,6 @@
         }
     ]);
 
-    /*
-     * Temporarily show viewer under Details for titles without a digital
-     * representation in place yet; remove after migration is complete.
-     */
-    app.component("prmActionListAfter", {
-        bindings: {
-            parentCtrl: '<'
-        },
-        controller: 'imageViewerAfterController',
-        template: '\n       <br> <div class="image-preview" ng-if="$ctrl.show" flex-md="100" flex-lg="100" flex-xl="100" flex>\n            <div class="">\n                <div layout="row" layout-align="center center" class="layout-align-center-center layout-row">\n                    <h4 class="section-title md-title light-text">Image View</h4>\n                    <a href="{{manifest_trust_link}}"><img src="https://libraryimage.nga.gov/manifest/iiif-logo.png" alt="IIIF icon" height="30"></a>\n                    <md-divider flex></md-divider>\n                </div>\n                <div class="">\n                    <div class="spaced-rows">\n                        <div style="padding-top:1em;">\n                            <div class="imageWrapper">\n                                <iframe ng-src="{{manifest_short_link}}" allowfullscreen frameborder="0"></iframe>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>'
-    });
-
     app.component("prmAlmaViewitAfter", {
         bindings: {
             parentCtrl: '<'

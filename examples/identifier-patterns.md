@@ -1,6 +1,4 @@
-# Identifier and Manifest Patterns
-
-This file records known identifier conventions used by the integration.
+# Example including one digital book record with metadata and services throughout systems of Alma, Primo, NetX, and IIIF.
 
 ## Alma MMS ID
 

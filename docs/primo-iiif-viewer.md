@@ -4,44 +4,80 @@
 
 Primo provides the patron-facing presentation layer for the Library's remotely managed digital resources.
 
-## Legacy Primo VE Implementation
+## Primo VE Implementation
 
-The original Primo VE implementation embeds an existing IIIF viewer within the Primo full-record experience.
+The Primo VE implementation embeds an IIIF viewer within the Primo full-record experience.
 
-Historical implementation notes describe the customization as using:
+The customization uses:
 
 - AngularJS.
 - JavaScript.
-- HTML.
-- CSS.
-- An IIIF viewer such as Mirador or Universal Viewer.
-- The IIIF manifest associated with the Alma resource.
+- HTML templates.
+- IIIF Presentation manifests.
+- Universal Viewer for Main Library resources.
+- Mirador for Image Collection resources.
+
+**Source code:** [`sourcecode/primo-ve/image-viewer.js`](../sourcecode/primo-ve/image-viewer.js)  
+**Implementation notes:** [`sourcecode/primo-ve/README.md`](../sourcecode/primo-ve/README.md)
+
+### Viewer Routing
+
+The customization reads the Primo PNX `control.sourcerecordid` and uses it to construct the IIIF manifest URL. The local display field `display.lds01` controls whether the viewer is enabled.
+
+For Main Library resources, the default route is:
+
+```text
+Primo PNX source record ID
+      ↓
+libraryimage.nga.gov/manifest/mms/{ID}.json
+      ↓
+Universal Viewer
+```
+
+For Image Collection records, when the Primo best-location library code is `IMAGES`, the customization switches both the manifest collection and viewer:
+
+```text
+Primo record — libraryCode = IMAGES
+      ↓
+libraryimage.nga.gov/manifest/ic/{ID}.json
+      ↓
+Mirador
+```
+
+The implementation also distinguishes records delivered through Alma Digital (`Alma-D`) so the viewer can be inserted in the appropriate Primo component.
+
+### Primo Component Placement
+
+The source code uses two Primo VE extension points:
+
+- `prmActionListAfter` — displays the viewer for applicable titles outside the Alma Digital View It section.
+- `prmAlmaViewitAfter` — displays the viewer for records whose delivery category includes `Alma-D`.
+
+See the [Primo VE source code](../sourcecode/primo-ve/image-viewer.js) for the implemented controller and component templates.
+
+## Separation from Repository Logic
+
+The viewer does not manage or store the images.
+
+It consumes the IIIF Presentation manifest, which references image services delivered from the Gallery infrastructure. This means viewer replacement does not require a redesign of the DAM integration.
 
 Conceptually:
 
 ```text
 Primo full record
       ↓
-View Online section
+PNX / Alma Digital delivery information
       ↓
-Read/construct IIIF manifest reference
+Construct IIIF manifest reference
       ↓
-Embedded IIIF viewer
+Universal Viewer or Mirador
       ↓
 Manifest + IIIF Image API
 ```
 
-## Separation from Repository Logic
-
-The viewer does not need to manage or store the images.
-
-It consumes the IIIF Presentation manifest, which in turn references the image services delivered from the Gallery infrastructure.
-
-This means viewer replacement should not require a redesign of the DAM integration.
-
 ## Primo NDE
 
-Primo NDE uses a different customization framework from the legacy Primo VE AngularJS customization package.
+Primo NDE uses a different customization framework from the Primo VE AngularJS customization package.
 
 The Library therefore needs to **rewrite the IIIF viewer customization for NDE**.
 
@@ -58,3 +94,5 @@ NDE custom component
     ↓
 IIIF viewer
 ```
+
+The existing [Primo VE implementation](../sourcecode/primo-ve/) provides the functional reference for the NDE redevelopment while the underlying Alma–NetX–IIIF architecture remains unchanged.

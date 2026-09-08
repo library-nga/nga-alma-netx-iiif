@@ -52,6 +52,12 @@ For multi-image objects, validate more than the first image when practical.
 
 The manifest describes the digital object and points to the relevant IIIF image services.
 
+Manifest generation is handled by the Library's locally developed Python processing workflow. The main orchestration script retrieves the current processing input and runs the appropriate NetX metadata retrieval, manifest-generation, and Alma update scripts for Main Library and Image Collection resources.
+
+**Source code:** [`sourcecode/main-process.py`](../sourcecode/main-process.py)
+
+The manifest-generation step called by this workflow is also documented in the repository as [`sourcecode/main-netxjson-to-manifest.py`](../sourcecode/main-netxjson-to-manifest.py).
+
 Standard conceptual manifest URL:
 
 ```text

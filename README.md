@@ -20,7 +20,7 @@ The implementation was designed around a clear separation of responsibilities:
 The architecture separates library resource management, digital asset management, IIIF delivery, and public discovery while connecting them through Alma Remote Digital Repository, NetX/eDAM APIs, IIIF manifests, and the Primo viewer. See [System Architecture](docs/architecture.md) for details.
 
 <p align="center">
-  <img src="diagrams/system-architecture.svg" alt="NGA Library Alma NetX IIIF system architecture" width="850">
+  <img src="diagrams/system-architecture.svg?v=20260908" alt="NGA Library Alma NetX IIIF system architecture" width="850">
 </p>
 
 ### Digital Publishing Workflow

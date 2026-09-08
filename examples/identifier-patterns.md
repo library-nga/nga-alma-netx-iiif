@@ -41,7 +41,6 @@ Image/service references inside the manifest is delivered via Gallery developed 
 https://api.nga.gov/...
 ```
 Example:
-https://api.nga.gov/iiif/d29a5c29-7d2a-417c-aef1-64c710a6e184/full/full/0/default.jpg
 ```text
-
+https://api.nga.gov/iiif/d29a5c29-7d2a-417c-aef1-64c710a6e184/full/full/0/default.jpg
 ```

@@ -1,4 +1,6 @@
-# Example including one digital book record with metadata and services throughout systems of Alma, Primo, NetX, and IIIF.
+# Example 
+
+Below documents one digital book record with metadata and services throughout systems of Alma, Primo, NetX, and IIIF.
 
 ## Alma MMS ID
 

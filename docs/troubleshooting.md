@@ -18,7 +18,7 @@ Alma Digital Representation
 Primo Viewer
 ```
 
-Do not begin with Primo if the image itself cannot be delivered through IIIF.
+Do not begin with Primo if the image itself cannot be delivered through IIIF Image API.
 
 ## Scenario: One Image in a Manifest Does Not Display
 
@@ -51,7 +51,6 @@ Check:
 - Manifest URL and MMS ID.
 - Whether the expected manifest has been generated.
 - Whether a multi-volume suffix is required.
-- Whether all referenced canvas IDs are valid.
 - Whether all referenced image services resolve.
 - Whether a recent republish requires manifest regeneration.
 
@@ -76,7 +75,6 @@ Confirm:
 - Digital representation exists.
 - Correct Remote Digital Repository is assigned.
 - Expected Alma Collection relationship exists.
-- Resource has been indexed/published to discovery.
 
 ## Scenario: Multi-Volume Resource
 
@@ -90,11 +88,6 @@ Manifest naming may follow:
 
 However, not every multipart bibliographic record uses separate manifests. Verify how the resource was intentionally modeled before assuming a missing `-1`/`-2` manifest is an error.
 
-## Scenario: External Project Uses Old Canvas IDs
-
-The 2021 eDAM migration preserved manifest URLs but changed canvas/image identifiers to UUID-based values.
-
-An external project that references a manifest URL should normally continue to find the manifest, but projects that stored individual canvas IDs may require updates.
 
 ## Information to Capture for Escalation
 
@@ -107,6 +100,5 @@ When reporting an issue, capture:
 - Failing canvas/image-service URL.
 - Time of failure.
 - Whether unpublish/republish resolved it.
-- Browser/network error if presentation is involved.
 
 This makes it easier to determine whether the failure belongs to eDAM publishing, IIIF delivery, manifest generation, Alma configuration, or Primo presentation.

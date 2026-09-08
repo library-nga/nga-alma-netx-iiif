@@ -48,9 +48,8 @@ The implementation also distinguishes records delivered through Alma Digital (`A
 
 ### Primo Component Placement
 
-The source code uses two Primo VE extension points:
+The source code uses below Primo VE extension point:
 
-- `prmActionListAfter` — displays the viewer for applicable titles outside the Alma Digital View It section.
 - `prmAlmaViewitAfter` — displays the viewer for records whose delivery category includes `Alma-D`.
 
 See the [Primo VE source code](../sourcecode/primo-ve/image-viewer.js) for the implemented controller and component templates.

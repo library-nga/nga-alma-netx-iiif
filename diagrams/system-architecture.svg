@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760">
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#222"/></marker>
     <style>
-      .box{fill:#fff;stroke-width:2}.title{font:700 24px Arial,sans-serif}.sub{font:italic 16px Arial,sans-serif}.txt{font:16px Arial,sans-serif}.small{font:14px Arial,sans-serif}.purple{stroke:#5630a5}.green{stroke:#169447}.orange{stroke:#e78313}.red{stroke:#e43d24}.blue{stroke:#236ac5}.line{stroke:#222;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.dash{stroke:#222;stroke-width:2.5;stroke-dasharray:8 7;fill:none;marker-end:url(#arrow)}
+      .box{fill:#fff;stroke-width:2}.title{font:700 24px Arial,sans-serif}.sub{font:italic 16px Arial,sans-serif}.txt{font:16px Arial,sans-serif}.purple{stroke:#5630a5}.green{stroke:#169447}.orange{stroke:#e78313}.red{stroke:#e43d24}.line{stroke:#222;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.dash{stroke:#222;stroke-width:2.5;stroke-dasharray:8 7;fill:none;marker-end:url(#arrow)}
     </style>
     <g id="iiifLogo">
       <circle cx="7" cy="7" r="4" fill="#1498b7"/><rect x="3" y="13" width="8" height="27" rx="1" fill="#1498b7"/>
@@ -16,76 +16,70 @@
       <path d="M33 35 A20 20 0 0 1 12 38" fill="none" stroke="#111" stroke-width="9"/>
       <path d="M12 38 A20 20 0 0 1 6 18" fill="none" stroke="#111" stroke-width="9"/>
     </g>
+    <g id="apiIcon"><circle cx="14" cy="14" r="10" fill="none" stroke="#111" stroke-width="5" stroke-dasharray="5 3"/></g>
   </defs>
-  <rect width="900" height="720" fill="white"/>
+  <rect width="900" height="760" fill="white"/>
 
-  <!-- Primo VE -->
   <rect class="box purple" x="250" y="18" width="400" height="76" rx="12"/>
   <g transform="translate(272 36) scale(.9)"><use href="#clarivateIcon"/></g>
   <text class="title" x="465" y="51" text-anchor="middle" fill="#4c27a1">Primo VE</text>
   <text class="sub" x="465" y="76" text-anchor="middle">Discovery / Viewer</text>
   <path class="line" d="M450 94 V124"/>
 
-  <!-- Custom Viewer -->
   <rect class="box purple" x="250" y="125" width="400" height="62" rx="12"/>
   <g transform="translate(282 137) scale(.82)"><use href="#iiifLogo"/></g>
-  <text class="title" x="475" y="165" text-anchor="middle" font-size="21">Custom IIIF Viewer</text>
+  <text class="title" x="475" y="165" text-anchor="middle">Custom IIIF Viewer</text>
   <path class="line" d="M450 187 V217"/>
 
-  <!-- Manifest -->
   <rect class="box purple" x="250" y="218" width="400" height="76" rx="12"/>
   <g transform="translate(282 232) scale(.82)"><use href="#iiifLogo"/></g>
   <text class="title" x="485" y="250" text-anchor="middle" fill="#5630a5">IIIF Manifest</text>
   <text class="txt" x="485" y="277" text-anchor="middle">libraryimage.nga.gov/manifest</text>
 
-  <!-- Branches -->
-  <path class="line" d="M450 294 V320 H220 V348"/>
-  <path class="line" d="M450 320 H680 V348"/>
+  <path d="M450 294 V315 H220 V337" stroke="#222" stroke-width="2.5" fill="none"/>
+  <path d="M450 315 H680 V337" stroke="#222" stroke-width="2.5" fill="none"/>
 
-  <!-- Alma -->
-  <rect class="box green" x="70" y="350" width="300" height="190" rx="12"/>
-  <g transform="translate(90 372) scale(.95)"><use href="#clarivateIcon"/></g>
-  <text class="title" x="225" y="394" text-anchor="middle" fill="#169447">Alma</text>
-  <text class="txt" x="112" y="432">• Remote Digital Repository</text>
-  <text class="txt" x="112" y="460">• Digital Representation</text>
-  <text class="txt" x="112" y="488">• Collection hierarchy</text>
-  <ellipse cx="220" cy="515" rx="30" ry="9" fill="#31aa24" stroke="#117c13"/>
-  <rect x="190" y="515" width="60" height="24" fill="#31aa24" stroke="#117c13"/>
-  <ellipse cx="220" cy="539" rx="30" ry="9" fill="#31aa24" stroke="#117c13"/>
+  <rect class="box green" x="115" y="338" width="210" height="52" rx="10"/>
+  <g transform="translate(137 350)"><use href="#apiIcon"/></g>
+  <text class="title" x="230" y="372" text-anchor="middle" fill="#169447" font-size="19">Alma API</text>
+  <path class="line" d="M220 390 V417"/>
 
-  <!-- NetX -->
-  <rect class="box orange" x="530" y="350" width="300" height="190" rx="12"/>
-  <text x="552" y="402" font-family="Arial" font-size="34" font-weight="bold" fill="#152a42">Net<tspan fill="#52a641">X</tspan></text>
-  <text class="title" x="716" y="394" text-anchor="middle" fill="#d9760d">NetX/eDAM</text>
-  <text class="txt" x="575" y="432">• Asset repository</text>
-  <text class="txt" x="575" y="460">• Metadata + images</text>
-  <text class="txt" x="575" y="488">• Web publishing</text>
-  <ellipse cx="680" cy="515" rx="30" ry="9" fill="#f29900" stroke="#c86d00"/>
-  <rect x="650" y="515" width="60" height="24" fill="#f29900" stroke="#c86d00"/>
-  <ellipse cx="680" cy="539" rx="30" ry="9" fill="#f29900" stroke="#c86d00"/>
+  <rect class="box orange" x="575" y="338" width="210" height="52" rx="10"/>
+  <g transform="translate(597 350)"><use href="#apiIcon"/></g>
+  <text class="title" x="690" y="372" text-anchor="middle" fill="#e78313" font-size="19">NetX API</text>
+  <path class="line" d="M680 390 V417"/>
 
-  <!-- Alma-NetX integration -->
-  <path class="dash" d="M370 445 H530"/>
-  <path class="dash" d="M530 457 H370"/>
+  <rect class="box green" x="70" y="420" width="300" height="190" rx="12"/>
+  <g transform="translate(90 442) scale(.95)"><use href="#clarivateIcon"/></g>
+  <text class="title" x="225" y="464" text-anchor="middle" fill="#169447">Alma</text>
+  <text class="txt" x="112" y="502">• Remote Digital Repository</text>
+  <text class="txt" x="112" y="530">• Digital Representation</text>
+  <text class="txt" x="112" y="558">• Collection hierarchy</text>
+  <ellipse cx="220" cy="585" rx="30" ry="9" fill="#31aa24" stroke="#117c13"/>
+  <rect x="190" y="585" width="60" height="16" fill="#31aa24" stroke="#117c13"/>
+  <ellipse cx="220" cy="601" rx="30" ry="9" fill="#31aa24" stroke="#117c13"/>
 
-  <!-- NetX API -->
-  <path class="line" d="M680 540 V566"/>
-  <rect class="box orange" x="570" y="568" width="220" height="46" rx="10"/>
-  <circle cx="600" cy="591" r="12" fill="none" stroke="#222" stroke-width="5" stroke-dasharray="6 3"/>
-  <text class="txt" x="690" y="597" text-anchor="middle" font-weight="bold">custom NetX API</text>
-  <path class="line" d="M680 614 V637"/>
+  <rect class="box orange" x="530" y="420" width="300" height="190" rx="12"/>
+  <text x="552" y="472" font-family="Arial" font-size="34" font-weight="bold" fill="#152a42">Net<tspan fill="#52a641">X</tspan></text>
+  <text class="title" x="716" y="464" text-anchor="middle" fill="#d9760d">NetX/eDAM</text>
+  <text class="txt" x="575" y="502">• Asset repository</text>
+  <text class="txt" x="575" y="530">• Metadata + images</text>
+  <text class="txt" x="575" y="558">• Web publishing</text>
+  <ellipse cx="680" cy="585" rx="30" ry="9" fill="#f29900" stroke="#c86d00"/>
+  <rect x="650" y="585" width="60" height="16" fill="#f29900" stroke="#c86d00"/>
+  <ellipse cx="680" cy="601" rx="30" ry="9" fill="#f29900" stroke="#c86d00"/>
 
-  <!-- IIIF Image API -->
-  <rect class="box red" x="530" y="638" width="300" height="68" rx="12"/>
-  <g transform="translate(550 651) scale(.82)"><use href="#iiifLogo"/></g>
-  <text class="title" x="704" y="668" text-anchor="middle" fill="#e43d24" font-size="21">IIIF Image API</text>
-  <text class="txt" x="704" y="693" text-anchor="middle">api.nga.gov/UUID</text>
+  <path class="dash" d="M370 515 H530"/>
+  <path class="dash" d="M530 527 H370"/>
 
-  <!-- Image delivery loop -->
-  <path d="M530 674 H420 V620 H220 V540" stroke="#222" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
-  <rect class="box blue" x="270" y="588" width="220" height="78" rx="12"/>
-  <g transform="translate(286 602) scale(.62)"><use href="#iiifLogo"/></g>
-  <text class="txt" x="400" y="617" text-anchor="middle" font-weight="bold" fill="#236ac5">IIIF Image delivery</text>
-  <text class="small" x="400" y="640" text-anchor="middle">images served to viewer</text>
-  <text class="small" x="400" y="659" text-anchor="middle">via IIIF Image API</text>
+  <path class="line" d="M680 610 V632"/>
+  <rect class="box orange" x="570" y="634" width="220" height="46" rx="10"/>
+  <g transform="translate(588 643)"><use href="#apiIcon"/></g>
+  <text class="txt" x="690" y="663" text-anchor="middle" font-weight="bold">custom NetX API</text>
+  <path class="line" d="M680 680 V700"/>
+
+  <rect class="box red" x="530" y="702" width="300" height="50" rx="12"/>
+  <g transform="translate(550 707) scale(.75)"><use href="#iiifLogo"/></g>
+  <text class="title" x="704" y="724" text-anchor="middle" fill="#e43d24" font-size="20">IIIF Image API</text>
+  <text class="txt" x="704" y="745" text-anchor="middle">api.nga.gov/UUID</text>
 </svg>

@@ -1,6 +1,6 @@
 # Identifier and Manifest Patterns
 
-This file records known identifier conventions used by the integration. Examples are intended to document patterns, not to define every possible digital-resource structure.
+This file records known identifier conventions used by the integration.
 
 ## Alma MMS ID
 
@@ -12,7 +12,15 @@ Example:
 99682013504896
 ```
 
-## Standard Manifest
+## Primo Display
+
+```text
+https://library.nga.gov/permalink/01NGA_INST/pdr574/alma99682013504896
+```
+
+## IIIF Manifest
+
+With the metadata retrieval via Alma API and NetX API, manifest in json format is created using IIIF-Prezi library, check main-netxjson-to-manifest.py in sourcecode.
 
 ```text
 https://libraryimage.nga.gov/manifest/mms/{MMS_ID}.json
@@ -24,19 +32,10 @@ Example:
 https://libraryimage.nga.gov/manifest/mms/99682013504896.json
 ```
 
-## Multi-Volume Manifest
 
-```text
-https://libraryimage.nga.gov/manifest/mms/{MMS_ID}-1.json
-https://libraryimage.nga.gov/manifest/mms/{MMS_ID}-2.json
-```
+## IIIF Image
 
-The number of manifests depends on the intended digital representation of the bibliographic resource.
-
-
-## IIIF Image Services
-
-With the eDAM support, image/service references inside the manifest structure toward UUID-based Gallery API resources under:
+Image/service references inside the manifest is delivered via Gallery developed UUID-based API service under:
 
 ```text
 https://api.nga.gov/...
